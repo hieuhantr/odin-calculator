@@ -157,5 +157,9 @@ clear.addEventListener('click', () => {
 //erase one number
 const erase = document.querySelector('#erase');
 erase.addEventListener('click', () => {
-    bigDisplay.innerText = bigDisplay.innerText.slice(0, bigDisplay.innerText.length - 1);
+    if (bigDisplay.innerText.length > 1) {
+        bigDisplay.innerText = bigDisplay.innerText.slice(0, bigDisplay.innerText.length - 1);
+    } else {
+        bigDisplay.innerText = '0';
+    }
 });
